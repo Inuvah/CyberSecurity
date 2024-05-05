@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="29" height="13" tilewidth="64" tileheight="64" infinite="0" nextlayerid="5" nextobjectid="23">
+ <editorsettings>
+  <export target="../colisions/64x64 mapTwo.js" format="js"/>
+ </editorsettings>
+ <tileset firstgid="1" source="64x64.tsx"/>
+ <layer id="1" name="background" width="29" height="13">
+  <data encoding="csv">
+6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,
+8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,
+14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,
+14,0,0,0,0,28,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,13,
+14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,
+14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,
+24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,27,0,0,0,0,0,26,
+14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,
+14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,
+14,0,0,0,0,0,0,0,0,0,28,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,13,
+14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,
+10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,
+19,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,3
+</data>
+ </layer>
+ <layer id="3" name="collisions" width="29" height="13" visible="0" opacity="0.32">
+  <data encoding="csv">
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,0,0,0,0,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,0,0,0,0,0,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,0,0,0,0,0,0,0,0,0,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,
+20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20
+</data>
+ </layer>
+ <objectgroup id="4" name="Object Layer 1">
+  <object id="6" x="700" y="582.5" width="150" height="25">
+   <text pixelsize="22" wrap="1">Mr.Meseeks</text>
+  </object>
+  <object id="7" x="700" y="789.17" width="150" height="25">
+   <text pixelsize="22" wrap="1">Lea Skiwalker</text>
+  </object>
+  <object id="8" x="700" y="200" width="150" height="25">
+   <text pixelsize="22" wrap="1">Jake Pèralta</text>
+  </object>
+  <object id="9" x="400" y="200" width="150" height="25">
+   <text pixelsize="22" wrap="1">Charlíe-C.E.O</text>
+  </object>
+  <object id="10" x="1000" y="582" width="150" height="25">
+   <text pixelsize="22" wrap="1">John Pope</text>
+  </object>
+  <object id="11" x="400" y="390" width="132" height="25">
+   <text pixelsize="22" wrap="1">Kaptain Price</text>
+  </object>
+  <object id="12" x="1300" y="390" width="154" height="25">
+   <text pixelsize="22" wrap="1">Dory Swimming</text>
+  </object>
+  <object id="13" x="1300" y="582" width="150" height="25">
+   <text pixelsize="22" wrap="1">Karen HR</text>
+  </object>
+  <object id="14" x="1300" y="789" width="150" height="25">
+   <text pixelsize="22" wrap="1">Misty Williams</text>
+  </object>
+  <object id="15" x="990" y="390" width="183" height="25">
+   <text pixelsize="22" wrap="1">Adolf-Gas supplier</text>
+  </object>
+  <object id="16" x="100" y="390" width="141" height="25">
+   <text pixelsize="22" wrap="1">Simba Timons</text>
+  </object>
+  <object id="19" x="700" y="390" width="150" height="25">
+   <text pixelsize="22" wrap="1">Arthas Menethil</text>
+  </object>
+  <object id="21" x="1000" y="789" width="150" height="22">
+   <text pixelsize="22" wrap="1">Karl Jacobsen</text>
+  </object>
+  <object id="22" gid="48" x="1581.33" y="596.667" width="234" height="339.5"/>
+ </objectgroup>
+</map>

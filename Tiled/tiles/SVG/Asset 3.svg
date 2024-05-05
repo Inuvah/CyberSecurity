@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cf3c2f;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="BackgroundTiles">
+    <rect class="cls-2" x="0" y="0" width="32" height="32"/>
+    <rect class="cls-1" x="0" y="14.27" width="32" height="2.27"/>
+  </g>
+</svg>

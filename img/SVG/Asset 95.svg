@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.03 13.04">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-3 {
+        fill: #000;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <g id="BackgroundTiles">
+    <text class="cls-3" transform="translate(0 10.04)"><tspan x="0" y="0">Simba</tspan><tspan class="cls-2" x="31.34" y="0"> </tspan><tspan class="cls-1" x="33.4" y="0">T</tspan><tspan x="39.22" y="0">imons</tspan></text>
+  </g>
+</svg>

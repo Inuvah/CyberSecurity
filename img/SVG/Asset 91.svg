@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.45 13.04">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-2 {
+        fill: #000;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        letter-spacing: .01em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="BackgroundTiles">
+    <text class="cls-2" transform="translate(0 10.04)"><tspan class="cls-3" x="0" y="0">M</tspan><tspan class="cls-1" x="9.79" y="0">r</tspan><tspan x="13.08" y="0">.</tspan><tspan class="cls-4" x="15.56" y="0">M</tspan><tspan x="25.28" y="0">eseeks</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.4 13.04">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 12px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <g id="BackgroundTiles">
+    <text class="cls-1" transform="translate(0 10.04)"><tspan x="0" y="0">John </tspan><tspan class="cls-2" x="26.89" y="0">P</tspan><tspan x="32.98" y="0">ope</tspan></text>
+  </g>
+</svg>

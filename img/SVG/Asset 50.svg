@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cf3c2f;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="BackgroundTiles">
+    <g>
+      <rect class="cls-2" x="0" y="0" width="64" height="64" transform="translate(64 64) rotate(-180)"/>
+      <rect class="cls-1" x="2.27" y="29.73" width="64" height="4.54" transform="translate(66.27 -2.27) rotate(90)"/>
+      <rect class="cls-1" x="-16.28" y="29.73" width="64" height="4.54" transform="translate(47.72 16.28) rotate(90)"/>
+    </g>
+  </g>
+</svg>
