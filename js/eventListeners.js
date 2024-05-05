@@ -1,13 +1,16 @@
 let mistakes = 0;
 let correct = 0;
 
+function jump() {
+    if(player.velocity.y === 0){
+        player.velocity.y = -21;
+    }
+}
+
 window.addEventListener('keydown', (event) => {
     switch (event.key) {
         case 'w':
-        if(player.velocity.y === 0 
-        ){
-            player.velocity.y = -21;
-        }
+        jump()
         break
 
         case 'a':

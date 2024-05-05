@@ -20,7 +20,6 @@ class Player extends Sprite {
     }
   
     update() {
-
         //c.fillStyle = 'rgba(0, 0, 255, 0.5)'
         //c.fillRect(this.position.x, this.position.y, this.width, this.height)
         
@@ -28,7 +27,6 @@ class Player extends Sprite {
         this.updateHitbox();
         this.checkForHorizontalCollisions();
         this.applyGravity();
-
         this.updateHitbox();
 
         //c.fillRect(this.hitbox.position.x, this.hitbox.position.y, this.hitbox.width, this.hitbox.height)
@@ -113,6 +111,7 @@ class Player extends Sprite {
                         this.velocity.y = 0
                         const offset = this.hitbox.position.y - this.position.y;
                         this.position.y = collisionBlock.position.y + collisionBlock.height - offset + 0.01;
+                        player.collision = true
                         break
                     }
 
@@ -120,6 +119,7 @@ class Player extends Sprite {
                         this.velocity.y = 0
                         const offset = this.hitbox.position.y - this.position.y + this.hitbox.height;
                         this.position.y = collisionBlock.position.y - offset - 0.01;
+                        player.collision = true
                         break
                     }
             }

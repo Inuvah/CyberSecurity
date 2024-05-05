@@ -4,7 +4,7 @@ let exclamations;
 let mailsPhish;
 let mails;
 
-let level = 3.1;
+let level = 3.2;
 let levels = {
     1: {
         init: () => {
@@ -73,6 +73,19 @@ let levels = {
 
         }
     },
+    
+    /*
+      222222   
+    222    222   
+            222    
+             222   
+             222
+           222
+         222
+       222
+     222
+    222222222222
+    */
     2: {
         init: () => {
             parsedCollisions = collisionsLevel2.parse2D()
@@ -269,7 +282,18 @@ let levels = {
         
         }
     },
-
+  /*
+3333333       
+33333333       
+    3333       
+    3333       
+33333333       
+33333333      
+    3333       
+    3333       
+33333333  
+3333333   
+    */
     3: {
         init: () => {
             parsedCollisions = collisionsLevel3.parse2D()
@@ -336,6 +360,20 @@ let levels = {
         
     },
 
+
+    /*
+3333333        22222   
+33333333        2222   
+    3333        2222    
+    3333        2222   
+33333333        2222
+33333333        2222
+    3333        2222
+    3333        2222
+33333333  lll   2222
+3333333   lll  222222
+    */
+
     3.1: {
         init: () => {
             parsedCollisions = collisionsLevel3_1.parse2D()
@@ -392,7 +430,17 @@ let levels = {
                     autoplay: false,
                     loop: false,
                 }),
-
+                new Sprite ({
+                    position: {
+                        x:826,
+                        y:690,
+                    },
+                    imageSrc: 'img/fileCockwheel.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
 
             ]
 
@@ -430,6 +478,17 @@ let levels = {
                     autoplay: false,
                     loop: false,
                 }),
+                new Sprite ({
+                    position: {
+                        x:626,
+                        y:690,
+                    },
+                    imageSrc: 'img/file.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
             ]
 
             fileTexts = [
@@ -446,7 +505,18 @@ let levels = {
                 }),
                 new Sprite ({
                     position: {
-                        x:1226,
+                        x:826,
+                        y:574-78,
+                    },
+                    imageSrc: 'img/textFile.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x:626,
                         y:574-78,
                     },
                     imageSrc: 'img/textFile.png',
@@ -459,7 +529,18 @@ let levels = {
 
         }
     },
-
+/*
+3333333       222222222   
+33333333     22     2222   
+    3333             2222    
+    3333              2222   
+33333333              2222
+33333333             2222
+    3333           2222
+    3333         2222
+33333333  lll  2222
+3333333   lll  222222222222
+*/
     3.2: {
         init: () => {
             parsedCollisions = collisionsLevel3_2.parse2D()
@@ -494,8 +575,30 @@ let levels = {
             fileCockwheels = [
                 new Sprite ({
                     position: {
-                        x:1026,
-                        y:574-78,
+                        x:1735,
+                        y:310,
+                    },
+                    imageSrc: 'img/fileCockwheel.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x:135,
+                        y:245,
+                    },
+                    imageSrc: 'img/fileCockwheel.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x:902,
+                        y:245,
                     },
                     imageSrc: 'img/fileCockwheel.png',
                     frameRate: 6,
@@ -510,8 +613,41 @@ let levels = {
             files = [
                 new Sprite ({
                     position: {
-                        x:1426,
-                        y:574-78,
+                        x:1450,
+                        y: 310,
+                    },
+                    imageSrc: 'img/file.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x: 264,
+                        y: 245,
+                    },
+                    imageSrc: 'img/file.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x: 518,
+                        y: 245,
+                    },
+                    imageSrc: 'img/file.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x: 1092,
+                        y: 245,
                     },
                     imageSrc: 'img/file.png',
                     frameRate: 6,
@@ -521,13 +657,25 @@ let levels = {
                 }),
 
 
+
             ]
 
             fileTexts = [
                 new Sprite ({
                     position: {
-                        x:1226,
-                        y:574-78,
+                        x:393,
+                        y:245,
+                    },
+                    imageSrc: 'img/textFile.png',
+                    frameRate: 6,
+                    frameBuffer: 1,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x:710,
+                        y:245,
                     },
                     imageSrc: 'img/textFile.png',
                     frameRate: 6,
@@ -541,6 +689,18 @@ let levels = {
 
         }
     },
+      /*
+3333333        3333333   
+33333333       33333333   
+    3333           3333    
+    3333           3333   
+33333333       33333333
+33333333       33333333
+    3333           3333
+    3333           3333
+33333333  lll  33333333
+3333333   lll  3333333
+    */
     3.3: {
         init: () => {
             parsedCollisions = collisionsLevel3_3.parse2D()
