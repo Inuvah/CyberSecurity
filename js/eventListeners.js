@@ -43,7 +43,7 @@ window.addEventListener('keydown', (event) => {
                     player.velocity.x = 0;
                     player.velocity.y = 0;
                     keys.e.pressed = true;
-                    door.play();
+                    doorClone.play();
                     player.switchSprite('doorExit');
                     player.enteringDoor = true;
                     level = 1.1

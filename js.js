@@ -147,6 +147,11 @@ function animate() {
     }
 
     if (level == 1){
+        doorsClone.forEach((doorClone) => {
+            doorClone.draw()
+            })
+
+
         let textplacement = 400;
         c.font = "35px Arial"
         c.textBaseline = "top"
@@ -199,7 +204,6 @@ function animate() {
     player.handleInput(keys);
     player.draw();
     player.update();
-    
 }    
 
 levels[level].init();

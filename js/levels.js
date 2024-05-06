@@ -4,7 +4,7 @@ let exclamations;
 let mailsPhish;
 let mails;
 
-let level = 1.1;
+let level = 1;
 let levels = {
     1: {
         init: () => {
@@ -68,6 +68,9 @@ let levels = {
             parsedCollisions = collisionsLevel3.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
+            player.position.x = 64
+            player.position.y = 590
+            player.enteringDoor = false
 
             background = new Sprite({
                 position: {
