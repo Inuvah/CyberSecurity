@@ -4,7 +4,7 @@ let exclamations;
 let mailsPhish;
 let mails;
 
-let level = 3.2;
+let level = 1.1;
 let levels = {
     1: {
         init: () => {
@@ -21,6 +21,20 @@ let levels = {
             })
 
             doors = [
+                new Sprite({
+                    position: {
+                        x: 1550,
+                        y: 280.33-151,
+                    },
+                    imageSrc: 'img/door.png',
+                    frameRate: 6,
+                    frameBuffer: 10,
+                    loop: false,
+                    autoplay: false,
+                }),
+            ]
+
+            doorsClone = [
                 new Sprite({
                     position: {
                         x: 140,
@@ -44,33 +58,37 @@ let levels = {
                     loop: false,
                     autoplay: false,
                 }),
-                new Sprite({
-                    position: {
-                        x: 1550,
-                        y: 280.33-151,
-                    },
-                    imageSrc: 'img/door.png',
-                    frameRate: 6,
-                    frameBuffer: 10,
-                    loop: false,
-                    autoplay: false,
-                }),
             ]
             
-            exclamations = [
+
+        }
+    },
+    1.1: {
+        init: () => {
+            parsedCollisions = collisionsLevel3.parse2D()
+            collisionBlocks = parsedCollisions.createObjectsFrom2D()
+            player.collisionBlocks = collisionBlocks
+
+            background = new Sprite({
+                position: {
+                    x: 0,
+                    y: 0,
+                },
+                imageSrc: 'img/64x64mapThree.png',
+            })
+            fakeLogin = [
                 new Sprite ({
                     position: {
-                        x:254.45,
-                        y:68,
+                        x:800,
+                        y:639,
                     },
-                    imageSrc: 'img/exclamation.png',
+                    imageSrc: 'img/fakeLogin.png',
                     frameRate: 3,
-                    frameBuffer: 200,
+                    frameBuffer: 5,
                     autoplay: false,
-                    loop: true,
+                    loop: false,
                 })
             ]
-
         }
     },
     
@@ -302,7 +320,7 @@ let levels = {
             player.position.x = 164
             player.position.y = 500
             player.enteringDoor = false
-            
+            flagDetected = false
 
             background = new Sprite({
                 position: {
@@ -414,8 +432,8 @@ let levels = {
                         y:574-78,
                     },
                     imageSrc: 'img/fileCockwheel.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -425,8 +443,8 @@ let levels = {
                         y:690,
                     },
                     imageSrc: 'img/fileCockwheel.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -436,8 +454,8 @@ let levels = {
                         y:690,
                     },
                     imageSrc: 'img/fileCockwheel.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -447,23 +465,12 @@ let levels = {
             files = [
                 new Sprite ({
                     position: {
-                        x:1426,
-                        y:574-78,
-                    },
-                    imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
-                    autoplay: false,
-                    loop: false,
-                }),
-                new Sprite ({
-                    position: {
                         x:1026,
                         y:690,
                     },
                     imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -473,8 +480,8 @@ let levels = {
                         y:690,
                     },
                     imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -484,8 +491,22 @@ let levels = {
                         y:690,
                     },
                     imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
+                    autoplay: false,
+                    loop: false,
+                }),
+            ]
+
+            filesFalse = [
+                new Sprite ({
+                    position: {
+                        x:1426,
+                        y:574-78,
+                    },
+                    imageSrc: 'img/fileFalse.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -498,8 +519,8 @@ let levels = {
                         y:574-78,
                     },
                     imageSrc: 'img/textFile.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -509,8 +530,8 @@ let levels = {
                         y:574-78,
                     },
                     imageSrc: 'img/textFile.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -520,8 +541,8 @@ let levels = {
                         y:574-78,
                     },
                     imageSrc: 'img/textFile.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -579,8 +600,8 @@ let levels = {
                         y:310,
                     },
                     imageSrc: 'img/fileCockwheel.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -590,8 +611,8 @@ let levels = {
                         y:245,
                     },
                     imageSrc: 'img/fileCockwheel.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -601,13 +622,26 @@ let levels = {
                         y:245,
                     },
                     imageSrc: 'img/fileCockwheel.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
 
 
+            ]
+            fileCockwheelsFalse = [
+                new Sprite ({
+                    position: {
+                        x:135,
+                        y:245,
+                    },
+                    imageSrc: 'img/fileCockwheelFalse.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
+                    autoplay: false,
+                    loop: false,
+                }),
             ]
 
             files = [
@@ -617,8 +651,8 @@ let levels = {
                         y: 310,
                     },
                     imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -628,8 +662,8 @@ let levels = {
                         y: 245,
                     },
                     imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -639,25 +673,25 @@ let levels = {
                         y: 245,
                     },
                     imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
+            ]
+
+            filesFalse = [
                 new Sprite ({
                     position: {
                         x: 1092,
                         y: 245,
                     },
-                    imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    imageSrc: 'img/fileFalse.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
-
-
-
             ]
 
             fileTexts = [
@@ -667,8 +701,8 @@ let levels = {
                         y:245,
                     },
                     imageSrc: 'img/textFile.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -678,8 +712,8 @@ let levels = {
                         y:245,
                     },
                     imageSrc: 'img/textFile.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -721,7 +755,7 @@ let levels = {
                 new Sprite ({
                     position: {
                         x:100,
-                        y:680,
+                        y:170,
                     },
                     imageSrc: 'img/goBack.png',
                     frameRate: 1,
@@ -735,12 +769,34 @@ let levels = {
             fileCockwheels = [
                 new Sprite ({
                     position: {
-                        x:1026,
-                        y:574-78,
+                        x:676,
+                        y:170,
                     },
                     imageSrc: 'img/fileCockwheel.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x:1222,
+                        y:370,
+                    },
+                    imageSrc: 'img/fileCockwheel.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x:1722,
+                        y:370,
+                    },
+                    imageSrc: 'img/fileCockwheel.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
@@ -751,28 +807,61 @@ let levels = {
             files = [
                 new Sprite ({
                     position: {
-                        x:1426,
-                        y:574-78,
+                        x:1160,
+                        y:170,
                     },
                     imageSrc: 'img/file.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),
-
-
+                new Sprite ({
+                    position: {
+                        x:776,
+                        y:370,
+                    },
+                    imageSrc: 'img/file.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
+                    autoplay: false,
+                    loop: false,
+                }),
+            ]
+            filesFalse = [
+                new Sprite ({
+                    position: {
+                        x:1605,
+                        y:560,
+                    },
+                    imageSrc: 'img/fileFalse.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
+                    autoplay: false,
+                    loop: false,
+                }),
             ]
 
             fileTexts = [
                 new Sprite ({
                     position: {
-                        x:1226,
-                        y:574-78,
+                        x:1626,
+                        y:170,
                     },
                     imageSrc: 'img/textFile.png',
-                    frameRate: 6,
-                    frameBuffer: 1,
+                    frameRate: 8,
+                    frameBuffer: 6,
+                    autoplay: false,
+                    loop: false,
+                }),
+                new Sprite ({
+                    position: {
+                        x:1705,
+                        y:683,
+                    },
+                    imageSrc: 'img/textFile.png',
+                    frameRate: 8,
+                    frameBuffer: 6,
                     autoplay: false,
                     loop: false,
                 }),

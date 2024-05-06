@@ -124,8 +124,8 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 1152,
-                "y": 310
+                "x": 996,
+                "y": 415
             }
         },
         "tiles/64x64 mapTwo.tmx": {
@@ -135,8 +135,8 @@
             "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 944,
-                "y": 524
+                "x": 928,
+                "y": 418
             }
         },
         "tiles/64x64.tsx": {
@@ -162,8 +162,8 @@
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 948,
-                "y": 302
+                "x": 946,
+                "y": 300
             }
         },
         "tiles/64x64map3-3.tmx": {
@@ -181,8 +181,8 @@
             "scale": 0.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 920,
-                "y": 484
+                "x": 928,
+                "y": 415
             }
         },
         "tiles/64x64mapThree.tmx": {

@@ -1,5 +1,7 @@
 let mistakes = 0;
 let correct = 0;
+let flagDetected;
+let iteration = 1;
 
 function jump() {
     if(player.velocity.y === 0){
@@ -23,24 +25,63 @@ window.addEventListener('keydown', (event) => {
 
         case 'e': 
         if(level == 1) {
-            for (let i = 0; i < exclamations.length; i++){
-                //Exclamation NPC 
-                const exclamation = exclamations[i];
+
+            for (let i = 0; i < doorsClone.length; i++) {
+
+                const doorClone = doorsClone[i];
+            
+                //Doors
+                if 
+                (
+                    player.hitbox.position.x //+ player.hitbox.width 
+                    <= doorClone.position.x + doorClone.width &&
+                    player.hitbox.position.x >= doorClone.position.x &&
+                    player.hitbox.position.y + player.hitbox.height >= doorClone.position.y &&
+                    player.hitbox.position.y <= doorClone.position.y + doorClone.height
+                )
+                {
+                    player.velocity.x = 0;
+                    player.velocity.y = 0;
+                    keys.e.pressed = true;
+                    door.play();
+                    player.switchSprite('doorExit');
+                    player.enteringDoor = true;
+                    level = 1.1
+                    levels[level].init()
+                    return
+            } 
+        } 
+        } else if(level == 1.1) {
+            for (let i = 0; i < fakeLogin.length; i++){
+                //fakelogin
+                const fakeLogins = fakeLogin[i];
                 if
                 (
                     player.hitbox.position.x //+ player.hitbox.width 
-                    <= exclamation.position.x + exclamation.width &&
-                    player.hitbox.position.x >= exclamation.position.x &&
-                    player.hitbox.position.y + player.hitbox.height >= exclamation.position.y &&
-                    player.hitbox.position.y <= exclamation.position.y + exclamation.height
+                    <= fakeLogins.position.x + fakeLogins.width &&
+                    player.hitbox.position.x >= fakeLogins.position.x &&
+                    player.hitbox.position.y + player.hitbox.height >= fakeLogins.position.y &&
+                    player.hitbox.position.y <= fakeLogins.position.y + fakeLogins.height
                 )
                 {
                     keys.e.pressed = true
-                    exclamation.play()
+                    fakeLogins.play()
+                    player.switchSprite('folderExit');
+                        gsap.to(overlay, {
+                            opacity: 1,
+                            onComplete: () => {
+                                mistakes++
+                                level = 2
+                                levels[level].init()
+                                gsap.to(overlay, {
+                                    opacity: 0
+                                })
+                            }
+                        })
                     return
                 } 
             }
-        }
+        } 
 
         if(level == 1 || level == 2) {
             for (let i = 0; i < doors.length; i++) {
@@ -63,7 +104,7 @@ window.addEventListener('keydown', (event) => {
                     door.play();
                     player.switchSprite('doorExit');
                     player.enteringDoor = true;
-                    level = 2
+                    level++
                     levels[level].init()
                     return
             } 
@@ -87,6 +128,20 @@ window.addEventListener('keydown', (event) => {
                     mistakes++;
                     keys.e.pressed = true;
                     mail.play();
+                    if(mistakes == 3){
+                        iteration++;
+                        player.switchSprite('folderExit');
+                        gsap.to(overlay, {
+                            opacity: 1,
+                            onComplete: () => {
+                                level = 1
+                                levels[level].init()
+                                gsap.to(overlay, {
+                                    opacity: 0
+                                })
+                            }
+                        })
+                    }
                     return
                 } 
             }
@@ -214,6 +269,67 @@ window.addEventListener('keydown', (event) => {
                 } 
             }
         }
+        if(level == 3.2) {
+            for (let i = 0; i < fileCockwheelsFalse.length; i++){
+                //fileCockwheels
+                const fileCockwheelFalse = fileCockwheelsFalse[i];
+                if
+                (
+                    player.hitbox.position.x //+ player.hitbox.width 
+                    <= fileCockwheelFalse.position.x + fileCockwheelFalse.width &&
+                    player.hitbox.position.x >= fileCockwheelFalse.position.x &&
+                    player.hitbox.position.y + player.hitbox.height >= fileCockwheelFalse.position.y &&
+                    player.hitbox.position.y <= fileCockwheelFalse.position.y + fileCockwheelFalse.height
+                )
+                {
+                    flagDetected = true;
+                    keys.e.pressed = true;
+                    fileCockwheelFalse.play();
+                    return
+                } 
+            }
+
+            for (let i = 0; i < filesFalse.length; i++){
+                //filesFalse
+                const fileFalse = filesFalse[i];
+                if
+                (
+                    player.hitbox.position.x //+ player.hitbox.width 
+                    <= fileFalse.position.x + fileFalse.width &&
+                    player.hitbox.position.x >= fileFalse.position.x &&
+                    player.hitbox.position.y + player.hitbox.height >= fileFalse.position.y &&
+                    player.hitbox.position.y <= fileFalse.position.y + fileFalse.height
+                )
+                {
+                    flagDetected = true;
+                    keys.e.pressed = true;
+                    fileFalse.play();
+                    return
+                } 
+            }
+        }
+
+        if(level == 3.3 || level == 3.1) {
+            for (let i = 0; i < filesFalse.length; i++){
+                //filesFalse
+                const fileFalse = filesFalse[i];
+                if
+                (
+                    player.hitbox.position.x //+ player.hitbox.width 
+                    <= fileFalse.position.x + fileFalse.width &&
+                    player.hitbox.position.x >= fileFalse.position.x &&
+                    player.hitbox.position.y + player.hitbox.height >= fileFalse.position.y &&
+                    player.hitbox.position.y <= fileFalse.position.y + fileFalse.height
+                )
+                {
+                    flagDetected = true;
+                    keys.e.pressed = true;
+                    fileFalse.play();
+                    return
+                } 
+            }
+        }
+
         if(level == 3.1 || level == 3.2 || level == 3.3) {
             for (let i = 0; i < fileCockwheels.length; i++){
                 //fileCockwheels
@@ -250,6 +366,7 @@ window.addEventListener('keydown', (event) => {
                     return
                 } 
             }
+
 
             for (let i = 0; i < fileTexts.length; i++){
                 //fileTexts
