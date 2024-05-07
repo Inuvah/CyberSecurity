@@ -86,13 +86,14 @@ function animate() {
     c.restore();
 
     //for loops to have it draw multiples of one object
-    if(level == 1 || level == 2) {
+    if(level == 1 || level == 2 || level == 0) {
         doors.forEach((door) => {
         door.draw()
         })
     }
 
     if(level == 1 || level == 1.1 || level == 2){
+        if(mistakes == 3) mistakes = 0, correct = 0;
         c.font = "35px Arial";
         c.textBaseline = "top";
         c.fillStyle = "black";
@@ -176,13 +177,13 @@ function animate() {
             c.font = "35px Arial"
             c.textBaseline = "top"
             c.fillStyle = "red"
-            c.fillText("Keylogger DETECTED",645,textplacement)
+            c.fillText("Adware DETECTED",645,textplacement)
             c.fillStyle = "white"
-            c.font = "22px Arial"
-            c.fillText("You found a Keylogger that can be very dangerous to our company,",645,textplacement + 50)
-            c.fillText("like the name implies it is a malware that logs and saves any keys pressed.",645,textplacement + 75)
-            c.fillText("That information is then sent to the hacker and if the user typed in any passwords,",645,textplacement + 100)
-            c.fillText("the hacker can now use them too.",645,textplacement + 125)
+            c.font = "18px Arial"
+            c.fillText("You found adware, it will typically affect the users browser generating more adds than usual.",645,textplacement + 50)
+            c.fillText("The user will notice a lot more pop-up adds when surfing the internet, they are easy to",645,textplacement + 75)
+            c.fillText("notice but are also very common. The adware makes money when you click or even see it,",645,textplacement + 100)
+            c.fillText("and it often hides in ligitimate some are also called ligitimate adware it will ask for consent.",645,textplacement + 125)
         } 
         
     }
@@ -201,7 +202,7 @@ function animate() {
         c.font = "22px Arial"
         c.fillText("You are a prototype and will asked to simulate a couple of test, the first test",100,textplacement + 50)
         c.fillText("is detecting phishing attempts the company has had quite a problem with them.",100,textplacement + 75)
-        c.fillText("As a quick reminder phishing is someone pretending to be someone or something,",100,textplacement + 100)
+        c.fillText("As a quick reminder phishing is someone pretending to be someone else or something else that you know,",100,textplacement + 100)
         c.fillText("they do this to make you trust them and will then ask for information they shouldn't have.",100,textplacement + 125)
         c.fillText("This is called social engeneering and is the most common way to get hacked or scammed,",100,textplacement + 150)
         c.fillText("always stay vigilant concerning telefone calls, sms, mail, websites and any other form of communication.",100,textplacement + 175)
@@ -214,11 +215,11 @@ function animate() {
         c.fillStyle = "white"
         c.font = "16px Arial"
         c.fillText("This is a workers mail from this week and we know some of them are Phishing attempts.",66,textplacement + 50)
-        c.fillText("It is not the first time the one doing it already has multiple mail addresses from our employees,",66,textplacement + 75)
+        c.fillText("It is not the first time, the one doing it already has multiple mail addresses from our employees,",66,textplacement + 75)
         c.fillText("so it's not hard to make mails that look like they were sent from other employees.",66,textplacement + 100)
         c.fillText("To the right you will see all the contacts this employee should correspond with,",66,textplacement + 125)
-        c.fillText("check the sender of the mail and reference the contact list to make sure it really is",66,textplacement + 150)
-        c.fillText("the right person.",66,textplacement + 175)
+        c.fillText("check the sender of the mail(Under the mails) and reference the contact list to",66,textplacement + 150)
+        c.fillText("make sure it really is the right person.",66,textplacement + 175)
         c.fillText("And Mistakes will be counted cant have you flag every mail for phishing.",66,textplacement + 225)
     }
 
@@ -247,7 +248,20 @@ function animate() {
         c.textBaseline = "top";
         c.fillStyle = "black";
         c.fillText("Scanned:" + scanned + "/27",20,0);
-        c.fillText("Correct:" + flags,250,0);
+        c.fillText("Detected:" + flags,270,0);
+        if (flags == 4) {
+            gsap.to(overlay, {
+                opacity: 1,
+                onComplete: () => {
+                    level = 4
+                    levels[level].init()
+                    gsap.to(overlay, {
+                        opacity: 0
+                    })
+                }
+            })
+            flags = 0;
+        }
     }
 
     //Player.js

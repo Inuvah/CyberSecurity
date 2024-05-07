@@ -85,7 +85,7 @@ window.addEventListener('keydown', (event) => {
             }
         } 
 
-        if(level == 1 || level == 2) {
+        if(level == 1 || level == 0) {
             for (let i = 0; i < doors.length; i++) {
 
                 const door = doors[i];
@@ -110,8 +110,36 @@ window.addEventListener('keydown', (event) => {
                     levels[level].init()
                     return
             } 
-        }
-        }
+        } 
+    }
+
+    if(level == 2 && correct == 7) {
+        for (let i = 0; i < doors.length; i++) {
+
+            const door = doors[i];
+        
+            //Doors
+            if 
+            (
+                player.hitbox.position.x //+ player.hitbox.width 
+                <= door.position.x + door.width &&
+                player.hitbox.position.x >= door.position.x &&
+                player.hitbox.position.y + player.hitbox.height >= door.position.y &&
+                player.hitbox.position.y <= door.position.y + door.height
+            )
+            {
+                player.velocity.x = 0;
+                player.velocity.y = 0;
+                keys.e.pressed = true;
+                door.play();
+                player.switchSprite('doorExit');
+                player.enteringDoor = true;
+                level++
+                levels[level].init()
+                return
+        } 
+    } 
+}
         
 
         if(level == 3) {

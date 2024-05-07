@@ -1,5 +1,16 @@
-$grøn:green;
-
-@mixin gigafunktion() {
-    
+/*I dont really have any css...*/
+//
+//var
+$bg-color: white;
+//funktion
+@mixin mg {
+    margin:2% 0 0 1.5%;
+}
+//nesting
+body {
+    background-color: $bg-color;
+    //include funktion
+    canvas {
+        @include mg;
+    }
 }

@@ -4,14 +4,46 @@ let exclamations;
 let mailsPhish;
 let mails;
 
-let level = 1;
+let level = 3.3;
 let levels = {
+    0: {
+        init: () => {
+            parsedCollisions = collisionsLevel0.parse2D()
+            collisionBlocks = parsedCollisions.createObjectsFrom2D()
+            player.collisionBlocks = collisionBlocks
+
+            background = new Sprite({
+                position: {
+                    x: 0,
+                    y: 0,
+                },
+                imageSrc: 'img/map.png',
+            })
+
+            doors = [
+                new Sprite({
+                    position: {
+                        x: 1550,
+                        y: 638,
+                    },
+                    imageSrc: 'img/door.png',
+                    frameRate: 6,
+                    frameBuffer: 10,
+                    loop: false,
+                    autoplay: false,
+                }),
+            ]
+        }
+    },
     1: {
         //initialize new levels with this function loads level collision from collisionBlock(position of blocks) and player.js(collision detection)
         init: () => {
             parsedCollisions = collisionsLevel1.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
+            player.position.x = 64
+            player.position.y = 590
+            player.enteringDoor = false
 
             background = new Sprite({
                 position: {
@@ -744,8 +776,8 @@ let levels = {
             parsedCollisions = collisionsLevel3_3.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
             player.collisionBlocks = collisionBlocks
-            player.position.x = 164
-            player.position.y = 500
+            player.position.x = 100
+            player.position.y = 100
             player.enteringDoor = false
 
             background = new Sprite({
@@ -875,4 +907,23 @@ let levels = {
 
         }
     },
+
+    4: {
+        init: () => {
+            parsedCollisions = collisionsLevel3.parse2D()
+            collisionBlocks = parsedCollisions.createObjectsFrom2D()
+            player.collisionBlocks = collisionBlocks
+            player.position.x = 164
+            player.position.y = 500
+            player.enteringDoor = false
+
+            background = new Sprite({
+                position: {
+                    x: 0,
+                    y: 0,
+                },
+                imageSrc: 'img/64x64mapFour.png',
+            })
+        }
+    }
 }
