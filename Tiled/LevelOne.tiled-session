@@ -3,10 +3,10 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "tiles/64x64map3-2.tmx",
+    "activeFile": "tiles/64x64map3-3.tmx",
     "expandedProjectPaths": [
-        ".",
-        "tiles"
+        "tiles",
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -171,10 +171,10 @@
                 3
             ],
             "scale": 0.5,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 928,
-                "y": 415
+                "x": 1094,
+                "y": 420
             }
         },
         "tiles/64x64mapLogin.tmx": {
@@ -239,9 +239,9 @@
         "tiles/64x64 mapTwo.tmx",
         "tiles/64x64mapThree.tmx",
         "tiles/64x64map3-1.tmx",
+        "tiles/64x64map3-2.tmx",
         "tiles/64x64mapLogin.tmx",
         "tiles/64x64map3-3.tmx",
-        "tiles/64x64map3-2.tmx",
         "mailMap.tmx",
         "tiles/all.tsx",
         "map.tmx",

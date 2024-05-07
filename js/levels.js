@@ -7,6 +7,7 @@ let mails;
 let level = 1;
 let levels = {
     1: {
+        //initialize new levels with this function loads level collision from collisionBlock(position of blocks) and player.js(collision detection)
         init: () => {
             parsedCollisions = collisionsLevel1.parse2D()
             collisionBlocks = parsedCollisions.createObjectsFrom2D()
@@ -23,8 +24,8 @@ let levels = {
             doors = [
                 new Sprite({
                     position: {
-                        x: 1550,
-                        y: 280.33-151,
+                        x: 140,
+                        y: 280-151,
                     },
                     imageSrc: 'img/door.png',
                     frameRate: 6,
@@ -37,8 +38,8 @@ let levels = {
             doorsClone = [
                 new Sprite({
                     position: {
-                        x: 140,
-                        y: 280-151,
+                        x: 1550,
+                        y: 280.33-151,
                     },
                     imageSrc: 'img/door.png',
                     frameRate: 6,

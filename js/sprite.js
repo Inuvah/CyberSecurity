@@ -67,6 +67,8 @@ class Sprite {
     updateFrames() {
         if(!this.autoplay) return
 
+        
+
         this.elapsedFrames++;
 
         if(this.elapsedFrames % this.frameBuffer === 0) {

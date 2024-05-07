@@ -1,3 +1,5 @@
+//Array of all player animations and interactions
+//Frame rate simply divides the sprite into even pieces and slide between them creating a animation loop
 const player = new Player({
     imageSrc: "img/Idle.png",
     frameRate: 6,

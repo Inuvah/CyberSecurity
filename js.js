@@ -1,8 +1,25 @@
+//Needed a framerate so game runs at the same speed on all pc's
+var stop = false;
+var frameCount = 0;
+var fps, fpsInterval, startTime, now, then, elapsed;
+
+startAnimating(60);
+
+function startAnimating(fps) {
+    fpsInterval = 1000 / fps;
+    then = Date.now();
+    startTime = then;
+    animate();
+}
+
+//Create canvas that the game can be drawn on
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
+//canvas size
 canvas.width = 64*29;
 canvas.height = 64*13;
+
 
 let parsedCollisions;
 let collisionBlocks;
@@ -27,7 +44,30 @@ const overlay = {
     opacity: 0,
 }
 
+//Draw everything onto the canvas 60 times per second
 function animate() {
+
+    if (stop) {
+        return;
+    }
+
+    // request another frame
+
+    requestAnimationFrame(animate);
+
+    // calc elapsed time since last loop
+
+    now = Date.now();
+    elapsed = now - then;
+
+    // if enough time has elapsed, draw the next frame
+
+    if (elapsed > fpsInterval) {
+
+        // Get ready for next frame by setting then=now, but...
+        // Also, adjust for fpsInterval not being multiple of 16.67
+        then = now - (elapsed % fpsInterval);
+
     window.requestAnimationFrame(animate);
     c.fillStyle = 'grey';
     c.fillRect(0, 0, canvas.width, canvas.height);
@@ -45,6 +85,7 @@ function animate() {
     c.fillRect(0,0,canvas.width, canvas.height);
     c.restore();
 
+    //for loops to have it draw multiples of one object
     if(level == 1 || level == 2) {
         doors.forEach((door) => {
         door.draw()
@@ -201,10 +242,21 @@ function animate() {
         }) 
     }
 
+    if(level == 4 || level == 3 || level == 3.1 || level == 3.2 || level == 3.3) {
+        c.font = "35px Arial";
+        c.textBaseline = "top";
+        c.fillStyle = "black";
+        c.fillText("Scanned:" + scanned + "/27",20,0);
+        c.fillText("Correct:" + flags,250,0);
+    }
+
+    //Player.js
     player.handleInput(keys);
     player.draw();
     player.update();
+}
 }    
 
+//levels.js 
 levels[level].init();
 animate();
