@@ -4,7 +4,7 @@ let exclamations;
 let mailsPhish;
 let mails;
 
-let level = 3.3;
+let level = 0;
 let levels = {
     0: {
         init: () => {

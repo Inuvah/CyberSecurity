@@ -132,11 +132,11 @@
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 0.25,
+            "scale": 1,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 928,
-                "y": 418
+                "x": 1750,
+                "y": 487
             }
         },
         "tiles/64x64.tsx": {
@@ -173,16 +173,16 @@
             "scale": 0.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1090,
-                "y": 416
+                "x": 928,
+                "y": 415
             }
         },
         "tiles/64x64mapLogin.tmx": {
             "scale": 0.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 926,
-                "y": 414
+                "x": 928,
+                "y": 415
             }
         },
         "tiles/64x64mapThree.tmx": {
@@ -192,8 +192,8 @@
             "scale": 0.33,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 927.2727272727273,
-                "y": 416.66666666666674
+                "x": 924.2424242424244,
+                "y": 415.15151515151507
             }
         },
         "tiles/all.tsx": {
@@ -213,8 +213,8 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 408,
-                "y": 536
+                "x": 406,
+                "y": 534
             }
         },
         "tiles/walls.tsx": {
@@ -226,7 +226,7 @@
         }
     },
     "last.exportedFilePath": "C:/Users/ooliv/OneDrive/Dokumenter/GitHub/CyberSecurity/Tiled/colisions",
-    "last.imagePath": "C:/Users/ooliv/OneDrive/Dokumenter/GitHub/CyberSecurity/img/2x",
+    "last.imagePath": "C:/Users/ooliv/OneDrive/Dokumenter/GitHub/CyberSecurity/img",
     "map.height": 13,
     "map.lastUsedExportFilter": "JavaScript map files (*.js)",
     "map.lastUsedFormat": "tmx",

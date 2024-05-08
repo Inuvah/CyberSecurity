@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="64x64" tilewidth="578" tileheight="599" tilecount="48" columns="0">
+<tileset version="1.10" tiledversion="1.10.2" name="64x64" tilewidth="578" tileheight="599" tilecount="49" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="64" height="64" source="../../img/SVG/Asset 56.svg"/>
@@ -147,5 +147,8 @@
  </tile>
  <tile id="47">
   <image width="368" height="599" source="../../img/2x/Asset 83@2x.png"/>
+ </tile>
+ <tile id="48">
+  <image width="262" height="426" source="../../img/Asset 109.png"/>
  </tile>
 </tileset>
